@@ -1,0 +1,27 @@
+<Addin id="CodeSnippetAddin"
+	 namespace="Tomboy"
+	 name="Insert Code snippet"
+	 author="Chaosz"
+	 description="Inserts Code snippet."
+	 category="Tools"
+	 defaultEnabled="false"
+	 version="0.1">
+
+	 <Runtime>
+		  <Import assembly="CodeSnippet.dll" />
+	 </Runtime>
+
+	 <Dependencies>
+		  <Addin id="Tomboy" version="0.10" />
+	 </Dependencies>
+
+	 <Extension path="/Tomboy/NoteAddins">
+		  <NoteAddin type="Tomboy.CodeSnippet.CodeSnippetNoteAddin" />
+	 </Extension>
+	
+	 <Extension path="/Tomboy/AddinPreferences">
+		  <AddinPreferenceFactory type="Tomboy.CodeSnippet.CodeSnippetPreferencesFactory" />
+	 </Extension>
+</Addin>
+
+
